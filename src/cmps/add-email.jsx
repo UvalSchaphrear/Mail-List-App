@@ -1,19 +1,29 @@
 
 import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { addEmail } from "../store/email.action.js";
+import { EmailList } from "./list-email.jsx";
 
 export const AddEmail = () => {
 
     const [emailAddress, setEmailAddress] = useState('')
     const [emailContent, setEmailContent] = useState('')
     const [email, setEmail] = useState({})
+    const [emails, setEmails] = useState([])
+
+    const dispatch = useDispatch()
 
     const submit = (ev) => {
         ev.preventDefault()
         setEmail({ emailAddress, emailContent })
-        // console.log('kkk');
-        console.log(email);
-
+        setEmails(emails => [...emails, email])
     }
+
+    useEffect(() => {
+        if (email.emailAddress) {
+            dispatch(addEmail(email))
+        }
+    }, [email])
 
     const handleChange = (ev) => {
         let field = ev.target.name
@@ -24,7 +34,6 @@ export const AddEmail = () => {
 
     return (
         <div>
-            <div>{email.emailAddress} {email.emailContent}</div>
             <form onSubmit={submit}>
                 <input type="email"
                     placeholder="Email"
@@ -43,8 +52,7 @@ export const AddEmail = () => {
                 </textarea>
                 <button type="submit">Submit</button>
             </form>
+            <EmailList emails={emails} />
         </div>
     )
-
-
 }

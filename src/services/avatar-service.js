@@ -7,9 +7,9 @@ const STORAGE_KEY = 'mailDB'
 let mailAdress = ''
 
 
-export const landingService = {
-    getAvatar,
-}
+// export const landingService = {
+//     getAvatar,
+// }
 
 export async function getAvatar() {
     try {
