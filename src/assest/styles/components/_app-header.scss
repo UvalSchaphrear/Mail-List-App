@@ -1,0 +1,13 @@
+.app-header{
+    height: 70px;
+    background-color: aqua;
+
+    .main-header{
+        justify-content: space-between;
+        align-items: center;
+
+        a{
+            padding-inline-start: 20px;
+        }
+    }
+}
