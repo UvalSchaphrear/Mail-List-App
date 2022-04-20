@@ -1,12 +1,7 @@
 import { Link } from "react-router-dom";
-import { loadEmails } from "../store/email.action";
-import { useDispatch } from "react-redux";
 
 export const EmailPreview = ({ email }) => {
-
-    // const dispatch = useDispatch()
-
-    console.log(email)
+    // console.log(email)
     if (!email) return <div></div>
     return (
         <Link className="clean-link" title="email details" to={`/email/${email.id}`}>

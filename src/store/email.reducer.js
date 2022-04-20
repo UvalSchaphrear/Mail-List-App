@@ -1,5 +1,6 @@
 const initialState = {
     emails: [],
+    filterBy: ''
 }
 
 export function emailReducer(state = initialState, action) {
@@ -13,9 +14,9 @@ export function emailReducer(state = initialState, action) {
         case 'ADD_EMAIL':
             newState = { ...state, emails: [...state.emails, action.email] }
             break;
-        case 'REMOVE_EMAIL':
-            newState = { ...state, emails: state.emails.filter(email => email.Key !== action.emailId) }
-            break;
+        case 'SET_FILTER':
+            newState = { ...state, filterBy: action.filterBy }
+            break
         default:
     }
     return newState;

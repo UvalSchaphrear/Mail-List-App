@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addEmail } from "../store/email.action.js";
-import { EmailList } from "./list-email.jsx";
+import { EmailList } from "./email-list.jsx";
 
 export const AddEmail = () => {
 
@@ -15,7 +15,7 @@ export const AddEmail = () => {
 
     const submit = (ev) => {
         ev.preventDefault()
-        setEmail({ emailAddress, emailContent })
+        setEmail({ emailAddress, emailContent, avatarPic: emailAddress })
         setEmails(emails => [...emails, email])
     }
 
@@ -52,7 +52,7 @@ export const AddEmail = () => {
                 </textarea>
                 <button type="submit">Submit</button>
             </form>
-            <EmailList emails={emails} />
+            {/* <EmailList emails={emails} /> */}
         </div>
     )
 }

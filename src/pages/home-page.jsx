@@ -1,13 +1,15 @@
 import { useNavigate } from 'react-router-dom'
 import { AddEmail } from '../cmps/add-email'
-import { EmailPreview } from '../cmps/preview-email'
-
+import { FilterBar } from '../cmps/filter-bar'
+import { EmailList } from '../cmps/email-list'
 
 export const HomePage = () => {
     return <section className="main-container">
-        <div>Home Page
+        <div>
             <AddEmail />
-            <EmailPreview />
+            <EmailList />
+            {/* <FilterBar /> */}
+
         </div>
     </section>
 }
