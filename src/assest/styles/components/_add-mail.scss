@@ -1,6 +1,7 @@
 .email-add-container {
     position: relative;
     justify-content: space-around;
+    margin-block-end: 8px;
     .address-and-content {
         width: 200px;
         height: 180px;
@@ -23,6 +24,7 @@
             height: 100%;
         }
         button {
+            cursor: pointer;
             border: none;
             background-color: $clr1;
             border-radius: 4px;

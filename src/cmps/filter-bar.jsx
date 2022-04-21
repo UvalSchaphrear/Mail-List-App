@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux"
 import { setFilter } from "../store/email.action.js"
 import { EmailList } from "./email-list"
 
+import magnifyingGlass from "../assest/svg/magnifying-glass.svg"
+
 
 export const FilterBar = (props) => {
 
@@ -22,7 +24,8 @@ export const FilterBar = (props) => {
     }
 
     return (
-        <div className="flex filter-bar">
+        <div className="flex main-container filter-bar">
+            <img src={magnifyingGlass} alt="" />
             <input
                 type="text"
                 placeholder="Filter"

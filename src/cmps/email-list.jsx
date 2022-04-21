@@ -24,10 +24,10 @@ export const EmailList = () => {
 
     return (
         <section>
-            <div>
+            <div className="filter-container flex">
                 <FilterBar />
             </div>
-            <div className="email-list">
+            <div className="email-list flex">
                 {emails.map((email, idx) =>
                     <EmailPreview key={idx} email={email} />
                 )
