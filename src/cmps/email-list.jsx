@@ -11,21 +11,9 @@ export const EmailList = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        // if (filterBy.length) {
         dispatch(loadEmails(filterBy))
-        // }
     }, [dispatch, filterBy])
 
-    // useEffect(() => {
-    //     (async () => {
-    //         const filter = await loadEmails(filterBy)
-    //         dispatch(filter())
-    //     })();
-    //     dispatch()
-    //     return () => {
-    //         dispatch(loadEmails(filterBy))
-    //     }
-    // }, [dispatch, filterBy])
 
     console.log(emails)
     console.log(filterBy)

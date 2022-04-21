@@ -22,7 +22,7 @@ export const FilterBar = (props) => {
     }
 
     return (
-        <div>
+        <div className="flex filter-bar">
             <input
                 type="text"
                 placeholder="Filter"

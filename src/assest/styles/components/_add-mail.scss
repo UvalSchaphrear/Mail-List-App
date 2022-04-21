@@ -1,0 +1,36 @@
+.email-add-container {
+    position: relative;
+    justify-content: space-around;
+    .address-and-content {
+        width: 200px;
+        height: 180px;
+        background-color: $clr9;
+        // border: 1px solid $clr8;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 8px;
+        input {
+            border-radius: 2px;
+            gap:8px;
+            margin-block-end: 8px;
+            border: none;
+        }
+        textarea {
+            border-radius: 2px;
+            margin-block-end: 8px;
+            border: none;
+            resize: none;
+            height: 100%;
+        }
+        button {
+            border: none;
+            background-color: $clr1;
+            border-radius: 4px;
+            color: $clr5;
+
+        }
+    }
+    // .submit-button {
+    //     position: absolute;
+    // }
+}

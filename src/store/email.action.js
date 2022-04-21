@@ -1,11 +1,11 @@
 import { emailService } from '../services/emailService.js'
 
 export function loadEmails(filterBy) {
-    console.log(filterBy);
+    // console.log(filterBy);
     return async (dispatch) => {
         try {
             let emails = await emailService.query('emailDB')
-            console.log('filterBy', filterBy);
+            // console.log('filterBy', filterBy);
             if (!filterBy.length) {
                 const action = { type: 'SET_EMAILS', emails }
                 dispatch(action)
@@ -39,7 +39,7 @@ export function addEmail(email) {
 }
 
 export function setFilter(filterBy) {
-    console.log(filterBy);
+    // console.log(filterBy);
     return async (dispatch) => {
         try {
             dispatch({ type: 'SET_FILTER', filterBy })

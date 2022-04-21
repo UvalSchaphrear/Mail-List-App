@@ -34,23 +34,25 @@ export const AddEmail = () => {
 
     return (
         <div>
-            <form onSubmit={submit}>
-                <input type="email"
-                    placeholder="Email"
-                    required
-                    onChange={handleChange}
-                    name="address"
-                    value={emailAddress}
-                />
-                <textarea
-                    type="text"
-                    name="text"
-                    placeholder="Message"
-                    value={emailContent}
-                    onChange={handleChange}
-                >
-                </textarea>
-                <button type="submit">Submit</button>
+            <form className="flex email-add-container" onSubmit={submit}>
+                <div className=" address-and-content flex">
+                    <input type="email"
+                        placeholder="Email"
+                        required
+                        onChange={handleChange}
+                        name="address"
+                        value={emailAddress}
+                    />
+                    <textarea
+                        type="text"
+                        name="text"
+                        placeholder="Message"
+                        value={emailContent}
+                        onChange={handleChange}
+                    >
+                    </textarea>
+                    <button className="submit-button" type="submit">Submit</button>
+                </div>
             </form>
             {/* <EmailList emails={emails} /> */}
         </div>
