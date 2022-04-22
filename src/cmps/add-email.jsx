@@ -15,8 +15,14 @@ export const AddEmail = () => {
 
     const submit = (ev) => {
         ev.preventDefault()
-        setEmail({ emailAddress, emailContent, avatarPic: emailAddress })
+        setEmail({ emailAddress, emailContent })
         setEmails(emails => [...emails, email])
+        clearForm()
+    }
+
+    const clearForm = () => {
+        setEmailAddress('')
+        setEmailContent('')
     }
 
     useEffect(() => {

@@ -1,5 +1,8 @@
 import { emailService } from '../services/emailService.js'
 
+let md5 = require('md5')
+
+
 export function loadEmails(filterBy) {
     // console.log(filterBy);
     return async (dispatch) => {
@@ -30,6 +33,10 @@ export function loadEmails(filterBy) {
 export function addEmail(email) {
     return async (dispatch) => {
         try {
+            let img = md5(email.emailAddress)
+            img.toLocaleLowerCase()
+            const res = (`https://www.gravatar.com/avatar/${img}`)
+            email.avatarPic = res
             await emailService.save(email)
             dispatch({ type: 'ADD_EMAIL', email })
         } catch (err) {
