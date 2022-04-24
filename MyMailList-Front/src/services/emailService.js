@@ -9,8 +9,8 @@ export const emailService = {
     query,
 }
 
-async function query(filterBy = []) {
-    return await httpService.get('message_DB')
+async function query(filterBy = '') {
+    return await httpService.get('message/', filterBy)
 }
 
 // async function query() {
@@ -44,7 +44,7 @@ async function getById(emailId) {
 
 
 function save(emailToAdd) {
-    return httpService.post('email', emailToAdd)
+    return httpService.post('message', emailToAdd)
 }
 // async function save(emailToAdd) {
 //     console.log(emailToAdd);

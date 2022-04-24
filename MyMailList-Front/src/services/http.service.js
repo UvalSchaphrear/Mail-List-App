@@ -1,7 +1,7 @@
 import Axios from 'axios'
 
 const BASE_URL =
-  process.env.NODE_ENV === 'production' ? '/api/' : '//localhost:3030/api/'
+  process.env.NODE_ENV === 'production' ? '/api/' : 'http://localhost:3030/api/'
 
 var axios = Axios.create({
   withCredentials: true,
@@ -30,6 +30,8 @@ async function ajax(endpoint, method = 'GET', data = null) {
       data,
       params: method === 'GET' ? data : null,
     })
+    console.log(`${BASE_URL}${endpoint}`);
+    console.log(res.data);
     return res.data
   } catch (err) {
     console.log(

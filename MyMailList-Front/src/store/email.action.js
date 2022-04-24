@@ -7,7 +7,7 @@ export function loadEmails(filterBy) {
     // console.log(filterBy);
     return async (dispatch) => {
         try {
-            let emails = await emailService.query('emailDB')
+            let emails = await emailService.query('message')
             // console.log('filterBy', filterBy);
             if (!filterBy.length) {
                 const action = { type: 'SET_EMAILS', emails }
