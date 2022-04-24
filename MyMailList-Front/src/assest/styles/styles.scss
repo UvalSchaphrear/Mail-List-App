@@ -1,0 +1,20 @@
+// Setup
+@import "setup/variables.scss";
+@import "setup/functions.scss";
+@import "setup/mixins.scss";
+// @import "setup/typography.scss";
+
+// Basics
+@import "basics/helpers.scss";
+@import "basics/layout.scss";
+@import "basics/base.scss";
+
+// Compenents
+@import "components/app-header.scss";
+@import "components/add-mail.scss";
+@import "components/filter-bar.scss";
+@import "components/email-list.scss";
+@import "components/_email-preview.scss";
+
+// Pages
+@import "pages/home-page.scss"

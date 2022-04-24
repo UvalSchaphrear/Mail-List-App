@@ -1,0 +1,29 @@
+.filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block-end: 8px;
+    padding: 14px 0px;
+    border: 1px solid $clr9;
+    border-radius: 5px;
+    width: 250px;
+    height: 20px;
+    input{
+        background: none;
+        outline-style: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .filter-bar-container{
+        width: 200px;
+        border-radius: 100vh;
+        border: 1px solid $clr9;
+        padding: 10px 14px;
+    }
+    img {
+        height: 16px;
+        width: 16px;
+        margin-inline-end: 2px;
+    }
+}
