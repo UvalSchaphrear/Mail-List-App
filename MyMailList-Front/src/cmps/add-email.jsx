@@ -1,8 +1,7 @@
 
 import { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addEmail } from "../store/email.action.js";
-import { EmailList } from "./email-list.jsx";
 
 export const AddEmail = () => {
 
@@ -60,7 +59,6 @@ export const AddEmail = () => {
                     <button className="submit-button" type="submit">Submit</button>
                 </div>
             </form>
-            {/* <EmailList emails={emails} /> */}
         </div>
     )
 }

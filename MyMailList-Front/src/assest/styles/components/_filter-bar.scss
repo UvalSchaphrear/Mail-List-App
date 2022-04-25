@@ -1,7 +1,6 @@
 .filter-bar {
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-block-end: 8px;
     padding: 14px 0px;
     border: 1px solid $clr9;
@@ -24,6 +23,7 @@
     img {
         height: 16px;
         width: 16px;
+        margin-inline-start: 8px;
         margin-inline-end: 2px;
     }
 }

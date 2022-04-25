@@ -1,7 +1,6 @@
-import { useRef, useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { setFilter } from "../store/email.action.js"
-import { EmailList } from "./email-list"
 
 import magnifyingGlass from "../assest/svg/magnifying-glass.svg"
 
@@ -13,14 +12,11 @@ export const FilterBar = (props) => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        // if (filterBy) {
         dispatch(setFilter(filterBy))
-        // }
     }, [filterBy])
 
     const handleChange = (ev) => {
         setFilterBy(ev.target.value)
-        // console.log(filterBy)
     }
 
     return (
@@ -33,7 +29,6 @@ export const FilterBar = (props) => {
                 onChange={handleChange}
                 value={filterBy}
             />
-            {/* <EmailList filterBy={filterBy} /> */}
         </div>
     )
 }

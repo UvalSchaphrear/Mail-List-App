@@ -4,7 +4,7 @@ import { httpService } from './http.service.js'
 const STORAGE_KEY = 'emailDB'
 
 export const emailService = {
-    getById,
+    // getById,
     save,
     query,
 }
@@ -13,25 +13,6 @@ async function query(filterBy = '') {
     return await httpService.get('message/', filterBy)
 }
 
-// async function query() {
-//     try {
-//         var emails = await JSON.parse(localStorage.getItem(STORAGE_KEY)) || []
-//         return emails
-//     } catch (err) {
-//         console.log('Can\'t load emails', err)
-//     }
-// }
-
-
-async function getById(emailId) {
-    try {
-        const email = await storageService.get(STORAGE_KEY, emailId)
-        return email
-    } catch (err) {
-        console.log('Cant find email by Id', err);
-    }
-
-}
 // async function getById(emailId) {
 //     try {
 //         const email = await storageService.get(STORAGE_KEY, emailId)
@@ -42,15 +23,6 @@ async function getById(emailId) {
 
 // }
 
-
 function save(emailToAdd) {
     return httpService.post('message', emailToAdd)
 }
-// async function save(emailToAdd) {
-//     console.log(emailToAdd);
-//     try {
-//         return storageService.post(STORAGE_KEY, emailToAdd)
-//     } catch (err) {
-//         console.log(err)
-//     }
-// }

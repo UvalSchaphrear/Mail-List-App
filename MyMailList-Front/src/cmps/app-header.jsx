@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate, NavLink } from 'react-router-dom'
+import logo from '../assest/img/logo.png'
 
 export const AppHeader = () => {
 
@@ -8,14 +9,14 @@ export const AppHeader = () => {
   return (
     <header className="app-header main-container">
       <div className="main-header flex">
-
-        <div className="logo" onClick={() => navigate("/")}>
-          My Mail List
+        <div className="logo flex" onClick={() => navigate("/")}>
+          <img src={logo} alt="" />
         </div>
-        <nav className="main-nav">
+        <div>My Mail List</div>
+        {/* <nav className="main-nav">
           <NavLink className={() => "clean-link"} to="/favorites">Favorites</NavLink>
           <NavLink className={() => "clean-link"} to="/">Home page</NavLink>
-        </nav>
+        </nav> */}
       </div>
     </header>
   )

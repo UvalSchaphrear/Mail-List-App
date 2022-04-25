@@ -1,6 +1,4 @@
-import { useNavigate } from 'react-router-dom'
 import { AddEmail } from '../cmps/add-email'
-import { FilterBar } from '../cmps/filter-bar'
 import { EmailList } from '../cmps/email-list'
 
 export const HomePage = () => {
@@ -8,7 +6,6 @@ export const HomePage = () => {
         <div>
             <AddEmail />
             <EmailList />
-            {/* <FilterBar /> */}
 
         </div>
     </section>

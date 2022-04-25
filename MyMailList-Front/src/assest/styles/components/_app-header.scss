@@ -1,12 +1,17 @@
 .app-header{
     height: 70px;
-    background-color: aqua;
+    background-color:$clr13;
     margin-block-end: 25px;
-
+    box-shadow: 0px 0px 8px 3px $clr3;
     .main-header{
-        justify-content: space-between;
+        // justify-content: space-between;
         align-items: center;
-
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-inline-end: 25px;
+        }
+        
         a{
             padding-inline-start: 20px;
         }
