@@ -4,11 +4,9 @@ let md5 = require('md5')
 
 
 export function loadEmails(filterBy) {
-    // console.log(filterBy);
     return async (dispatch) => {
         try {
             let emails = await emailService.query('message')
-            // console.log('filterBy', filterBy);
             if (!filterBy.length) {
                 const action = { type: 'SET_EMAILS', emails }
                 dispatch(action)
@@ -46,7 +44,6 @@ export function addEmail(email) {
 }
 
 export function setFilter(filterBy) {
-    // console.log(filterBy);
     return async (dispatch) => {
         try {
             dispatch({ type: 'SET_FILTER', filterBy })

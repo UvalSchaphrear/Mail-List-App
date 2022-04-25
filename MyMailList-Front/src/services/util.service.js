@@ -45,7 +45,7 @@ function formattedDates(chosenDate) {
 function getCells() {
   const cells = []
   for (let i = 0; i < 100; i++) {
-      cells.push(<div key={`cell-${i}`} className="cell"></div>)
+    cells.push(<div key={`cell-${i}`} className="cell"></div>)
   }
   return cells
 }
@@ -111,14 +111,10 @@ function getAvgRatingsByKey(reviews) {
   }
 
   reviews.forEach((review) => {
-    // console.log(review);
     for (const key in review.ratings) {
-      // console.log(review.ratings);
-      // console.log(key);
       newRtaings[key] += review.ratings[key]
     }
   })
-  // console.log(newRtaings)
   return newRtaings
 }
 
@@ -134,57 +130,3 @@ function getAvgRatings(reviews) {
     communication: ratings.communication / numOfReviews,
   }
 }
-
-// function avgRatingsCleanliness(reviews) {
-//   let total = 0
-//   reviews.forEach(review => {
-//     total += review.ratings.cleanliness // getting right number
-//   })
-//   let avg = total / reviews.length
-//   return avg.toFixed(1)
-// }
-
-// function avgRatingsCommunication(reviews) {
-//   let total = 0
-//   reviews.forEach(review => {
-//     total += review.ratings.communication // getting right number
-//   })
-//   let avg = total / reviews.length
-//   return avg.toFixed(1)
-// }
-
-// function avgRatingsCheckIn(reviews) {
-//   let total = 0
-//   reviews.forEach(review => {
-//     total += review.ratings.checkIn // getting right number
-//   })
-//   let avg = total / reviews.length
-//   return avg.toFixed(1)
-// }
-
-// function avgRatingsAccuracyy(reviews) {
-//   let total = 0
-//   reviews.forEach(review => {
-//     total += review.ratings.accuracy // getting right number
-//   })
-//   let avg = total / reviews.length
-//   return avg.toFixed(1)
-// }
-
-// function avgRatingsAccessibility(reviews) {
-//   let total = 0
-//   reviews.forEach(review => {
-//     total += review.ratings.accessibility // getting right number
-//   })
-//   let avg = total / reviews.length
-//   return avg.toFixed(1)
-// }
-
-// function avgRatingsLocation(reviews) {
-//   let total = 0
-//   reviews.forEach(review => {
-//     total += review.ratings.location // getting right number
-//   })
-//   let avg = total / reviews.length
-//   return avg.toFixed(1)
-// }

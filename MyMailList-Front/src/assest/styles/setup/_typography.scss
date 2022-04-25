@@ -1,24 +1,12 @@
 @font-face {
-    font-family:f-black;
-    src: url(../../font/AirbnbCerealBlack.woff);
+    font-family:m-reg;
+    src: url(../../fonts/static/Montserrat-Regular.ttf);
 }
 @font-face {
-    font-family:f-bold;
-    src: url(../../font/AirbnbCerealBold.woff);
+    font-family:m-bold;
+    src: url(../../fonts/static/Montserrat-Bold.ttf);
 }
 @font-face {
-    font-family:f-book;
-    src: url(../../font/AirbnbCerealBook.woff);
-}
-@font-face {
-    font-family:f-extrabold;
-    src: url(../../font/AirbnbCerealExtraBold.woff);
-}
-@font-face {
-    font-family:f-light;
-    src: url(../../font/AirbnbCerealLight.woff);
-}
-@font-face {
-    font-family:f-medium;
-    src: url(../../font/AirbnbCerealMedium.woff);
+    font-family:abril;
+    src: url(../../fonts/AbrilFatface-Regular.ttf);
 }

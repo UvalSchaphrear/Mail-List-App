@@ -4,7 +4,12 @@
     margin-block-end: 25px;
     box-shadow: 0px 0px 8px 3px $clr3;
     .main-header{
-        // justify-content: space-between;
+        font-family: abril;
+        font-size: 32px;
+        div {
+            color: $clr4;
+
+        }
         align-items: center;
         .logo {
             width: 40px;
@@ -12,8 +17,5 @@
             margin-inline-end: 25px;
         }
         
-        a{
-            padding-inline-start: 20px;
-        }
     }
 }
